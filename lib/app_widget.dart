@@ -9,8 +9,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    LocalJsonLocalization.delegate.directories = ['lib/i18n'];
-
+    LocalJsonLocalization.delegate.directories = ['lib/lang'];
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Buscar Cep',

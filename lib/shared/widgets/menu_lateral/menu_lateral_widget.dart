@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 
 class MenuLateralWidget extends StatefulWidget {
-  final List<Widget> options;
+  final Widget options;
   final User? user;
 
   const MenuLateralWidget({
@@ -59,7 +59,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget> {
                 ),
               ),
               const SizedBox(height: 10.0),
-              ...widget.options,
+              widget.options,
             ],
           ),
         ),

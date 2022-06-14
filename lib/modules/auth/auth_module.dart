@@ -27,8 +27,16 @@ class AuthModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute("/", child: (context, args) => const SplashPage()),
-    ChildRoute("/login", child: (context, args) => const LoginPage()),
+    ChildRoute(
+      "/",
+      child: (context, args) => const SplashPage(),
+    ),
+    ChildRoute(
+      "/login",
+      child: (context, args) => const LoginPage(),
+      transition: TransitionType.size,
+      duration: const Duration(milliseconds: 1200),
+    ),
     ChildRoute(
       "/cadastro",
       child: (context, args) => const CadastroPage(),

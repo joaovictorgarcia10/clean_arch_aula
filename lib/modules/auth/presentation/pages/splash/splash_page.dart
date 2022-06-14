@@ -1,5 +1,6 @@
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -9,6 +10,17 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  Future<void> navigate() async {
+    await Future.delayed(const Duration(seconds: 2));
+    Modular.to.pushReplacementNamed("/login");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    navigate();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

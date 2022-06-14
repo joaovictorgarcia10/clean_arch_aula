@@ -20,13 +20,13 @@ class MessageModalWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.40,
+        height: MediaQuery.of(context).size.height * 0.35,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               message,
-              style: AppTextStyles.title,
+              style: AppTextStyles.bodyText,
             ),
             const SizedBox(height: 40.0),
             ButtonWidget(
@@ -34,7 +34,7 @@ class MessageModalWidget extends StatelessWidget {
               onTap: onConfirm,
               color: AppColors.green,
             ),
-            const SizedBox(height: 10.0),
+            const SizedBox(height: 15.0),
             ButtonWidget(
               title: "Não",
               onTap: onDismiss ?? () => Navigator.pop(context),

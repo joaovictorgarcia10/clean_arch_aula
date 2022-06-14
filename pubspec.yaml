@@ -15,6 +15,8 @@ dependencies:
   flutter_localizations: 
     sdk: flutter
 
+  localization: ^2.1.0
+
   firebase_core: ^1.17.0
   firebase_auth: ^3.3.18
   cloud_firestore: ^3.1.16
@@ -27,7 +29,6 @@ dependencies:
   mask_text_input_formatter: ^2.3.0
   geolocator: ^8.2.1
   url_launcher: ^6.1.2
-  localization: ^2.1.0
 
 
 dev_dependencies:
@@ -41,7 +42,7 @@ flutter:
   
   assets:
      - assets/images/
-     - lib/lang
+     - lib/lang/
   
  # fonts:
  #    - family: Roboto

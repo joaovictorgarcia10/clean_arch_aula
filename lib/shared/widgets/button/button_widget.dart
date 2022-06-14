@@ -21,7 +21,7 @@ class ButtonWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 55.0,
+        height: 50.0,
         width: double.infinity,
         decoration: BoxDecoration(
           border: Border.all(

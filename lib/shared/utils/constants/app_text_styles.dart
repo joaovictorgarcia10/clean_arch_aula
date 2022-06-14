@@ -17,14 +17,14 @@ class AppTextStyles {
       fontFamily: "Roboto");
 
   static const TextStyle bodyText = TextStyle(
-      fontSize: 16.0,
+      fontSize: 18.0,
       letterSpacing: 0.25,
       fontWeight: FontWeight.w500,
       color: AppColors.white,
       fontFamily: "Roboto");
 
   static const TextStyle inputText = TextStyle(
-      fontSize: 18.0,
+      fontSize: 15.0,
       letterSpacing: 0.25,
       fontWeight: FontWeight.w700,
       color: AppColors.white,

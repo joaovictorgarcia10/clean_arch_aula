@@ -26,6 +26,7 @@ class FirebaseAppWidgetState extends State<FirebaseAppWidget> {
       await Future.delayed(const Duration(seconds: 1));
       await Firebase.initializeApp();
       firebaseStatus.value = FirebaseStatus.success;
+
       print("Firebase Started!");
     } on FirebaseException {
       firebaseStatus.value = FirebaseStatus.error;

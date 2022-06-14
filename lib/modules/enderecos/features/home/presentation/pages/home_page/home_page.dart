@@ -3,9 +3,9 @@ import 'package:clean_arch_aula/modules/enderecos/features/home/domain/usecases/
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_bloc.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_event.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_state.dart';
+import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/widgets/menu_lateral_items.dart';
 import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
-import 'package:clean_arch_aula/shared/widgets/list_tile/list_tile_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/menu_lateral/menu_lateral_widget.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 import 'package:clean_arch_aula/shared/utils/masks/app_masks.dart';
@@ -94,37 +94,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: MenuLateralWidget(
         user: Modular.get<Session>().usuario,
-        options: [
-          ListTileWidget(
-            title: "Meus Endereços",
-            leadingIcon: Icons.location_on_outlined,
-            onTap: () => Modular.to.popAndPushNamed("/meus_enderecos"),
-          ),
-          ListTileWidget(
-            title: "Sair",
-            leadingIcon: Icons.exit_to_app_outlined,
-            onTap: () {
-              showModalBottomSheet(
-                context: context,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(22.0),
-                    topRight: Radius.circular(22.0),
-                  ),
-                ),
-                builder: (context) {
-                  return MessageModalWidget(
-                    message: "Quer mesmo desconectar da sua conta?",
-                    onConfirm: () {
-                      Navigator.pop(context);
-                      bloc.add(const HomeEvent.disconnectAccount());
-                    },
-                  );
-                },
-              );
-            },
-          ),
-        ],
+        options: MenuLateralItems(),
       ),
       appBar: AppBar(
         title: const Text("Buscar CEP"),
@@ -189,12 +159,14 @@ class _HomePageState extends State<HomePage> {
                           orElse: () => SizedBox(
                             child: Column(
                               children: [
-                                Image.asset("assets/images/img1.png",
-                                    height: 175),
+                                Image.asset(
+                                  "assets/images/img1.png",
+                                  height: 175,
+                                ),
                                 const SizedBox(height: 20.0),
                                 const Text(
                                   "Aqui você pode fazer a busca de um endereço, apenas informando o seu CEP.",
-                                  style: AppTextStyles.title,
+                                  style: AppTextStyles.bodyText,
                                   textAlign: TextAlign.center,
                                 ),
                               ],
