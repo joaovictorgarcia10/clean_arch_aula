@@ -1,0 +1,15 @@
+{
+"login_page_label_1": "Welcome to\nFind CEP",
+"login_page_label_2": "Email",
+"login_page_label_3": "Password",
+"login_page_label_4": "Forgot my password",
+"login_page_label_5": "Sign in",
+"login_page_label_6": "Sign up",
+"login_page_label_7": "Welcome! %0",
+"cadastro_page_label_1" : "Sign up",
+"cadastro_page_label_2" : "Email",
+"cadastro_page_label_3" : "Password",
+"cadastro_page_label_4" : "Confirm password",
+"cadastro_page_label_5" : "Sign up",
+"cadastro_page_label_6" : "User registered with success!"
+}

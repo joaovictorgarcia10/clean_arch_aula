@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "70328570569",
+    "project_id": "clean-arch-aula",
+    "storage_bucket": "clean-arch-aula.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70328570569:android:4c7854055060dc4e6eb318",
+        "android_client_info": {
+          "package_name": "com.example.clean_arch_aula"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70328570569-g0fmio8aqp4qeefg2cr6nq784bg7duk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvP8IXFF8UPRnpo1XbePh-zCWu1BowesE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70328570569-g0fmio8aqp4qeefg2cr6nq784bg7duk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
