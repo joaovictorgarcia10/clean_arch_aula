@@ -28,8 +28,9 @@ Here we'll have the fundamental functionality to all the modules, implementation
 
 Each module are divided in some layers, so that each layer has its responsibility, following the Clean Architecture standard.
 
-### /domain
+- Domain
+- Data
+- Presentation
 
-### /data
+ <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/data-flow.png" width="415" height="600"/>
 
-### /presentation
