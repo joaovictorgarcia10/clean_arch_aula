@@ -128,13 +128,14 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-              //TODO: Implementar esqueci senha
               const SizedBox(height: 5.0),
               Align(
                 alignment: Alignment.centerRight,
                 child: InkWell(
                   child: Text("login_page_label_4".i18n()),
-                  onTap: () {},
+                  onTap: () {
+                    Modular.to.pushNamed("/esqueci_senha");
+                  },
                 ),
               ),
               const SizedBox(height: 60.0),

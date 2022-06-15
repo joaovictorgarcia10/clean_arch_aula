@@ -17,7 +17,7 @@ class AppTextStyles {
       fontFamily: "Roboto");
 
   static const TextStyle bodyText = TextStyle(
-      fontSize: 18.0,
+      fontSize: 20.0,
       letterSpacing: 0.25,
       fontWeight: FontWeight.w500,
       color: AppColors.white,

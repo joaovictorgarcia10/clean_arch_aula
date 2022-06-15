@@ -26,7 +26,7 @@ class MessageModalWidget extends StatelessWidget {
           children: [
             Text(
               message,
-              style: AppTextStyles.title,
+              style: AppTextStyles.bodyText,
             ),
             const SizedBox(height: 40.0),
             ButtonWidget(

@@ -22,8 +22,14 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Drawer(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(32.0),
+            topRight: Radius.circular(32.0),
+          ),
+        ),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
               DrawerHeader(

@@ -1,6 +1,7 @@
 import 'package:clean_arch_aula/modules/auth/domain/usecases/create_account.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/bloc/cadastro_bloc.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/cadastro_page.dart';
+import 'package:clean_arch_aula/modules/auth/presentation/pages/esqueci_senha/esqueci_senha_page.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login_bloc.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/login_page.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/splash/splash_page.dart';
@@ -40,6 +41,12 @@ class AuthModule extends Module {
     ChildRoute(
       "/cadastro",
       child: (context, args) => const CadastroPage(),
+      transition: TransitionType.rightToLeft,
+      duration: const Duration(milliseconds: 800),
+    ),
+    ChildRoute(
+      "/esqueci_senha",
+      child: (context, args) => const EsqueciSenhaPage(),
       transition: TransitionType.rightToLeft,
       duration: const Duration(milliseconds: 800),
     ),
