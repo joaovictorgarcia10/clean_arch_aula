@@ -23,3 +23,13 @@ The main features of the application, here the principle of modularization was a
 ### /shared
 
 Here we'll have the fundamental functionality to all the modules, implementations like generic errors, shared widgets and some utilities that can be acessed to the entire application.
+
+## Layers
+
+Each module are divided in some layers, so that each layer has its responsibility, following the Clean Architecture standard.
+
+### /domain
+
+### /data
+
+### /presentation
