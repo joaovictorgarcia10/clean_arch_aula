@@ -33,7 +33,6 @@ Each module are divided in some layers, so that each layer has its responsibilit
 - Data
 
 
-<p float="center"> 
-
+<div align="center"> 
   <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/data-flow.png" width="415" height="600"/>
-</p>
+</div>
