@@ -6,15 +6,18 @@ class LoadingModalWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.3,
-        child: const Center(
-          child: CircularProgressIndicator(
-            color: AppColors.white,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.3,
+          child: const Center(
+            child: CircularProgressIndicator(
+              color: AppColors.white,
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

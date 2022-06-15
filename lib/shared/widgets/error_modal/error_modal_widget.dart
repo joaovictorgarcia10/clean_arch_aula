@@ -16,7 +16,7 @@ class ErrorModalWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.35,
+        height: MediaQuery.of(context).size.height * 0.2,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -26,7 +26,7 @@ class ErrorModalWidget extends StatelessWidget {
                 message ??
                     "Não conseguimos processar o seu pedido. Tente novamente mais tarde.",
                 textAlign: TextAlign.center,
-                style: AppTextStyles.title,
+                style: AppTextStyles.bodyText,
               ),
             ),
             const SizedBox(height: 30.0),

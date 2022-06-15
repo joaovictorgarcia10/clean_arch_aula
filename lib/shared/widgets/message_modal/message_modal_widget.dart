@@ -20,13 +20,13 @@ class MessageModalWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.35,
+        height: MediaQuery.of(context).size.height * 0.3,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               message,
-              style: AppTextStyles.bodyText,
+              style: AppTextStyles.title,
             ),
             const SizedBox(height: 40.0),
             ButtonWidget(
