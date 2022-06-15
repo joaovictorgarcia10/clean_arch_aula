@@ -42,7 +42,7 @@ flutter:
   
   assets:
      - assets/images/
-     - lib/shared/lang
+     - lib/shared/lang/
   
  # fonts:
  #    - family: Roboto
