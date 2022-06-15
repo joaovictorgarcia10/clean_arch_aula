@@ -3,7 +3,7 @@
 A simple Flutter project, structured following the Clean Architecture and Clean Code principles.
 
 
-# Features
+## Features
 
 - [x] Internacionalization
 - [x] Sign in
@@ -14,7 +14,7 @@ A simple Flutter project, structured following the Clean Architecture and Clean 
 - [x] Redirect to Google Maps and shows the best route from your current location to the selected address      
 
   
-# Organization
+## Organization
 
 - Modules
 
