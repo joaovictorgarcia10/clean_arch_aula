@@ -34,7 +34,7 @@ Each module are divided in some layers, so that each layer has its responsibilit
 
 
 <div align="center"> 
-  <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/git/data-flow.png" width="600" height="600"/>
+  <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/git/data-flow.png" width="500" height="500"/>
 </div>
 
 ## Preview
