@@ -1,4 +1,4 @@
-import 'package:clean_arch_aula/modules/enderecos/features/meus_enderecos/data/datasources/meus_enderecos_datasource.dart';
+import 'package:clean_arch_aula/modules/enderecos/features/meus_enderecos/data/datasources/meus_enderecos_datasource_impl.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/meus_enderecos/data/repositories/meus_enderecos_repository_impl.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/meus_enderecos/domain/usecases/delete_endereco.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/meus_enderecos/domain/usecases/get_lista_enderecos.dart';
