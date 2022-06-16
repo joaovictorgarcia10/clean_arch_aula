@@ -21,4 +21,10 @@ class AuthRepositoryImpl implements AuthRepository {
     final result = datasource.createAccount(email: email, password: password);
     return result;
   }
+
+  @override
+  Future<Either<Failure, bool>> resetPassword({required String email}) {
+    final result = datasource.resetPassword(email: email);
+    return result;
+  }
 }

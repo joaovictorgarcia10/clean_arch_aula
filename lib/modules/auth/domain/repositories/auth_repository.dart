@@ -8,4 +8,6 @@ abstract class AuthRepository {
 
   Future<Either<Failure, bool>> createAccount(
       {required String email, required String password});
+
+  Future<Either<Failure, bool>> resetPassword({required String email});
 }

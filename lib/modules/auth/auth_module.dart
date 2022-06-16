@@ -1,3 +1,4 @@
+import 'package:clean_arch_aula/modules/auth/data/datasources/auth_datasource_impl.dart';
 import 'package:clean_arch_aula/modules/auth/domain/usecases/create_account.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/bloc/cadastro_bloc.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/cadastro_page.dart';
@@ -7,7 +8,6 @@ import 'package:clean_arch_aula/modules/auth/presentation/pages/login/login_page
 import 'package:clean_arch_aula/modules/auth/presentation/pages/splash/splash_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'data/datasources/auth_datasource.dart';
 import 'data/repositories/auth_repository_impl.dart';
 import 'domain/usecases/do_login.dart';
 
