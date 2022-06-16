@@ -24,7 +24,8 @@ class HomeDatasourceImpl implements HomeDatasource {
   Future<Either<Failure, EnderecoModel>> buscarEndreco(
       {required String cep}) async {
     try {
-      final result = await httpService.get(path: "/$cep");
+      final result =
+          await httpService.get(path: "https://viacep.com.br/ws/$cep/json/");
       if (result.statusCode == 200 && result.data != null) {
         return Right(EnderecoModel.fromMap(result.data));
       } else {

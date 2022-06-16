@@ -7,7 +7,6 @@ class DioHttpServiceImpl implements HttpService {
   DioHttpServiceImpl() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: "https://viacep.com.br/ws/",
         headers: {
           "content-type": "application/json;charset=utf-8",
         },
