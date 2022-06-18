@@ -28,6 +28,9 @@ dependencies:
   geolocator: ^8.2.1
   url_launcher: ^6.1.2
 
+  mocktail: ^0.3.0
+
+
 
 dev_dependencies:
   flutter_test:
