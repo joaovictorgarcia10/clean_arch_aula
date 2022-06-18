@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/esqueci_senha/bloc/esqueci_senha_event.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
+import 'package:clean_arch_aula/shared/utils/validators/app_form_validadors.dart';
 import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
@@ -30,6 +31,7 @@ class _EsqueciSenhaPageState extends State<EsqueciSenhaPage> {
     subscription = bloc.stream.listen((state) {
       state.maybeWhen(
         success: () {
+          Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text("Enviamos uma nova senha para o seu email"),
@@ -67,35 +69,39 @@ class _EsqueciSenhaPageState extends State<EsqueciSenhaPage> {
       appBar: AppBar(
         title: const Text('Esqueci a Senha'),
       ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                const Text(
-                  "Informe o seu email cadastrado e nós te enviaremos a sua nova senha.",
-                  style: AppTextStyles.title,
-                ),
-                const SizedBox(height: 50.0),
-                TextFormFieldWidget(
-                  controller: textController,
-                  label: "Email",
-                  prefixIcon: Icons.email_outlined,
-                ),
-                const SizedBox(height: 80.0),
-                ButtonWidget(
-                  title: "Enviar nova senha",
-                  color: AppColors.green,
-                  onTap: () {
-                    if (_formKey.currentState!.validate()) {
-                      bloc.add(EsqueciSenhaEvent.resetPassword(
-                          email: textController.text));
-                    }
-                  },
-                )
-              ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  const Text(
+                    "Informe o seu email cadastrado e nós te enviaremos a sua nova senha.",
+                    style: AppTextStyles.title,
+                  ),
+                  const SizedBox(height: 50.0),
+                  TextFormFieldWidget(
+                    controller: textController,
+                    label: "Email",
+                    prefixIcon: Icons.email_outlined,
+                    validator: (text) =>
+                        AppFormValidadors().emailValidator(text),
+                  ),
+                  const SizedBox(height: 80.0),
+                  ButtonWidget(
+                    title: "Enviar nova senha",
+                    color: AppColors.green,
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        bloc.add(EsqueciSenhaEvent.resetPassword(
+                            email: textController.text));
+                      }
+                    },
+                  )
+                ],
+              ),
             ),
           ),
         ),
