@@ -3,7 +3,7 @@ import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 import 'package:clean_arch_aula/shared/utils/masks/app_masks.dart';
 import 'package:clean_arch_aula/shared/utils/url_launch/launch_browser.dart';
-import 'package:clean_arch_aula/shared/utils/validators/app_validadors.dart';
+import 'package:clean_arch_aula/shared/utils/validators/app_form_validadors.dart';
 import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/error_modal/error_modal_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/message_modal/message_modal_widget.dart';
@@ -58,7 +58,7 @@ class _InformarNumeracaoPageState extends State<InformarNumeracaoPage> {
                       inputFormatters: [AppMasks.cepMask],
                       keyboardType: TextInputType.number,
                       validator: (text) =>
-                          AppValidadors().genericValidator(text),
+                          AppFormValidadors().genericValidator(text),
                     ),
                     const SizedBox(height: 50.0),
                     ButtonWidget(

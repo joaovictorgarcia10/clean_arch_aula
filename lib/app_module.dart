@@ -5,7 +5,7 @@ import 'package:clean_arch_aula/shared/features/geolocation/data/services/geoloc
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:clean_arch_aula/shared/features/geolocation/data/repositories/geolocation_repository_impl.dart';
 import 'shared/features/geolocation/domain/usecase/get_geolocation.dart';
-import 'shared/features/session/domain/entities/session.dart';
+import 'shared/core/session/session.dart';
 
 class AppModule extends Module {
   @override
@@ -22,11 +22,6 @@ class AppModule extends Module {
   final List<ModularRoute> routes = [
     ModuleRoute("/", module: AuthModule()),
     ModuleRoute("/home", module: HomeModule()),
-    ModuleRoute(
-      "/meus_enderecos",
-      module: MeusEnderecosModule(),
-      transition: TransitionType.rightToLeft,
-      duration: const Duration(milliseconds: 300),
-    ),
+    ModuleRoute("/meus_enderecos", module: MeusEnderecosModule()),
   ];
 }

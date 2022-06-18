@@ -1,4 +1,4 @@
-import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
+import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_modular/flutter_modular.dart';

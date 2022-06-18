@@ -4,12 +4,12 @@ import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pag
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_event.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_state.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/widgets/menu_lateral_items.dart';
-import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
+import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
 import 'package:clean_arch_aula/shared/widgets/menu_lateral/menu_lateral_widget.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 import 'package:clean_arch_aula/shared/utils/masks/app_masks.dart';
-import 'package:clean_arch_aula/shared/utils/validators/app_validadors.dart';
+import 'package:clean_arch_aula/shared/utils/validators/app_form_validadors.dart';
 import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/endereco_card/endereco_card_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/message_card/message_card_widget.dart';
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     prefixIcon: Icons.location_on_outlined,
                     inputFormatters: [AppMasks.cepMask],
                     keyboardType: TextInputType.number,
-                    validator: (text) => AppValidadors().cepValidator(text),
+                    validator: (text) => AppFormValidadors().cepValidator(text),
                   ),
                   const SizedBox(height: 50.0),
                   BlocBuilder<HomeBloc, HomeState>(

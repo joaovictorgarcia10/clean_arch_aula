@@ -6,11 +6,7 @@ import 'package:clean_arch_aula/shared/widgets/error_card/error_card_widget.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-enum FirebaseStatus {
-  loading,
-  error,
-  success,
-}
+enum FirebaseStatus { loading, error, success }
 
 class FirebaseAppWidget extends StatefulWidget {
   const FirebaseAppWidget({Key? key}) : super(key: key);
@@ -24,7 +20,6 @@ class FirebaseAppWidgetState extends State<FirebaseAppWidget> {
 
   void _initApplication() async {
     try {
-      firebaseStatus.value = FirebaseStatus.loading;
       await Future.delayed(const Duration(seconds: 1));
       await Firebase.initializeApp();
       firebaseStatus.value = FirebaseStatus.success;

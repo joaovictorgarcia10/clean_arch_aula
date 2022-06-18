@@ -1,7 +1,7 @@
 import 'package:clean_arch_aula/modules/enderecos/shared/models/endereco_model.dart';
 import 'package:clean_arch_aula/shared/core/error/failure.dart';
-import 'package:clean_arch_aula/shared/core/services/http_service.dart';
-import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
+import 'package:clean_arch_aula/shared/core/services/http_service/http_service.dart';
+import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';

@@ -1,4 +1,4 @@
-class AppValidadors {
+class AppFormValidadors {
   // Generic
   String? genericValidator(String? text) {
     if (text == null || text.isEmpty) {
@@ -40,7 +40,7 @@ class AppValidadors {
     return null;
   }
 
-  // Confirm Passoword
+  // Confirm Password
   String? confirmPasswordValidator(
       {String? confirmPassword, required String password}) {
     if (confirmPassword == null || confirmPassword.isEmpty) {

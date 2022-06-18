@@ -1,7 +1,7 @@
 import 'package:clean_arch_aula/modules/auth/domain/usecases/do_login.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login_event.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login_state.dart';
-import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
+import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 

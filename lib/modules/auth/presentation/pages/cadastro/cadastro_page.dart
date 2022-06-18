@@ -3,7 +3,7 @@ import 'package:clean_arch_aula/modules/auth/domain/usecases/create_account.dart
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/bloc/cadastro_bloc.dart';
 import 'package:clean_arch_aula/modules/auth/presentation/pages/cadastro/bloc/cadastro_event.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
-import 'package:clean_arch_aula/shared/utils/validators/app_validadors.dart';
+import 'package:clean_arch_aula/shared/utils/validators/app_form_validadors.dart';
 import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
@@ -96,7 +96,8 @@ class _CadastroPageState extends State<CadastroPage> {
                       controller: emailText,
                       label: "cadastro_page_label_2".i18n(),
                       prefixIcon: Icons.email_outlined,
-                      validator: (text) => AppValidadors().emailValidator(text),
+                      validator: (text) =>
+                          AppFormValidadors().emailValidator(text),
                     ),
                     const SizedBox(height: 10.0),
                     TextFormFieldWidget(
@@ -113,7 +114,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         });
                       },
                       validator: (text) =>
-                          AppValidadors().passwordValidator(text),
+                          AppFormValidadors().passwordValidator(text),
                     ),
                     const SizedBox(height: 10.0),
                     TextFormFieldWidget(
@@ -131,7 +132,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         });
                       },
                       validator: (text) =>
-                          AppValidadors().confirmPasswordValidator(
+                          AppFormValidadors().confirmPasswordValidator(
                         confirmPassword: text,
                         password: passwordText.text,
                       ),

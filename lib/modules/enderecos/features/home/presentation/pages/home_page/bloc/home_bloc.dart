@@ -3,7 +3,7 @@ import 'package:clean_arch_aula/modules/enderecos/features/home/domain/usecases/
 import 'package:clean_arch_aula/modules/enderecos/features/home/domain/usecases/save_endereco.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_event.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pages/home_page/bloc/home_state.dart';
-import 'package:clean_arch_aula/shared/features/session/domain/entities/session.dart';
+import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:clean_arch_aula/modules/auth/domain/entities/user.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';

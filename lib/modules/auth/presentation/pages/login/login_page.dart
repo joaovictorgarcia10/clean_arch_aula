@@ -4,7 +4,7 @@ import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login_event.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_colors.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
-import 'package:clean_arch_aula/shared/utils/validators/app_validadors.dart';
+import 'package:clean_arch_aula/shared/utils/validators/app_form_validadors.dart';
 import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
@@ -107,7 +107,8 @@ class _LoginPageState extends State<LoginPage> {
                       label: "login_page_label_2".i18n(),
                       prefixIcon: Icons.email_outlined,
                       keyboardType: TextInputType.emailAddress,
-                      validator: (text) => AppValidadors().emailValidator(text),
+                      validator: (text) =>
+                          AppFormValidadors().emailValidator(text),
                     ),
                     TextFormFieldWidget(
                       controller: passwordText,
@@ -123,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       prefixIcon: Icons.vpn_key_outlined,
                       validator: (text) =>
-                          AppValidadors().passwordValidator(text),
+                          AppFormValidadors().passwordValidator(text),
                     ),
                   ],
                 ),

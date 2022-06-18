@@ -2,9 +2,7 @@ name: clean_arch_aula
 description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 version: 1.0.0+1
-
 environment:
   sdk: ">=2.17.0 <3.0.0"
 

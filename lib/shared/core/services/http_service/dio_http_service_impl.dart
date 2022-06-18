@@ -1,5 +1,5 @@
+import 'package:clean_arch_aula/shared/core/services/http_service/http_service.dart';
 import 'package:dio/dio.dart';
-import 'package:clean_arch_aula/shared/core/services/http_service.dart';
 
 class DioHttpServiceImpl implements HttpService {
   late Dio _dio;
