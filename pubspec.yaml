@@ -49,8 +49,8 @@ flutter:
      - assets/images/
      - lib/shared/lang/
   
- # fonts:
- #    - family: Roboto
- #      fonts:
- #        - asset: assets/fonts/
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/
  
