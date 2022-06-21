@@ -1,6 +1,6 @@
 import 'package:clean_arch_aula/modules/enderecos/features/home/data/datasources/home_datasource.dart';
 import 'package:clean_arch_aula/modules/enderecos/features/home/domain/repositories/home_repository.dart';
-import 'package:clean_arch_aula/modules/enderecos/shared/models/endereco_model.dart';
+import 'package:clean_arch_aula/modules/enderecos/shared/entities/endereco.dart';
 import 'package:dartz/dartz.dart';
 import 'package:clean_arch_aula/shared/core/error/failure.dart';
 
@@ -9,7 +9,7 @@ class HomeRepositoryImpl implements HomeRepository {
   HomeRepositoryImpl(this._homeDatasource);
 
   @override
-  Future<Either<Failure, EnderecoModel>> buscarEndereco(
+  Future<Either<Failure, Endereco>> buscarEndereco(
       {required String cep}) async {
     final result = await _homeDatasource.buscarEndreco(cep: cep);
     return result;
@@ -17,7 +17,7 @@ class HomeRepositoryImpl implements HomeRepository {
 
   @override
   Future<Either<Failure, bool>> saveEndereco(
-      {required EnderecoModel endereco}) async {
+      {required Endereco endereco}) async {
     final result = await _homeDatasource.saveEndereco(endereco: endereco);
     return result;
   }

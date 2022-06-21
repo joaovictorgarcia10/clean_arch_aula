@@ -1,4 +1,3 @@
-import 'package:clean_arch_aula/modules/auth/data/models/user_model.dart';
 import 'package:clean_arch_aula/modules/auth/domain/entities/user.dart';
 import 'package:clean_arch_aula/modules/auth/domain/repositories/auth_repository.dart';
 import 'package:clean_arch_aula/shared/core/error/failure.dart';
@@ -10,7 +9,7 @@ class DoLogin extends UsecaseCore<User, DoLoginParams> {
   DoLogin({required this.repository});
 
   @override
-  Future<Either<Failure, UserModel>> call(DoLoginParams params) async {
+  Future<Either<Failure, User>> call(DoLoginParams params) async {
     final result = await repository.doLogin(
         email: params.email, password: params.password);
     return result.fold((l) => Left(l), (r) => Right(r));

@@ -1,3 +1,4 @@
+import 'package:clean_arch_aula/modules/enderecos/shared/entities/endereco.dart';
 import 'package:clean_arch_aula/shared/core/error/failure.dart';
 import 'package:clean_arch_aula/modules/enderecos/shared/models/endereco_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -11,6 +12,6 @@ class MeusEnderecosState with _$MeusEnderecosState {
   const factory MeusEnderecosState.failure({required Failure failure}) =
       _$MeusEnderecosStateFailure;
   const factory MeusEnderecosState.getListaEnderecosSuccess(
-          {required List<EnderecoModel> listaEnderecos}) =
+          {required List<Endereco> listaEnderecos}) =
       _$MeusEnderecosStateGetListaEnderecosSuccess;
 }

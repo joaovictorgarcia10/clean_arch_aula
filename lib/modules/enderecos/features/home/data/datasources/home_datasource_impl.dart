@@ -1,3 +1,4 @@
+import 'package:clean_arch_aula/modules/enderecos/shared/entities/endereco.dart';
 import 'package:clean_arch_aula/modules/enderecos/shared/models/endereco_model.dart';
 import 'package:clean_arch_aula/shared/core/error/failure.dart';
 import 'package:clean_arch_aula/shared/core/services/http_service/http_service.dart';
@@ -40,7 +41,7 @@ class HomeDatasourceImpl implements HomeDatasource {
 
   @override
   Future<Either<Failure, bool>> saveEndereco(
-      {required EnderecoModel endereco}) async {
+      {required Endereco endereco}) async {
     try {
       final response = firebaseFirestore.collection("enderecos");
 
