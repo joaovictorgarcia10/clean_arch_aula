@@ -33,7 +33,7 @@ class _$HomeStateTearOff {
   }
 
   _$HomeStateBuscarEnderecoSuccess buscarEnderecoSuccess(
-      {required EnderecoModel endereco}) {
+      {required Endereco endereco}) {
     return _$HomeStateBuscarEnderecoSuccess(
       endereco: endereco,
     );
@@ -58,7 +58,7 @@ mixin _$HomeState {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) =>
@@ -68,7 +68,7 @@ mixin _$HomeState {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) =>
@@ -78,7 +78,7 @@ mixin _$HomeState {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -182,7 +182,7 @@ class _$_$HomeStateEmpty implements _$HomeStateEmpty {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -195,7 +195,7 @@ class _$_$HomeStateEmpty implements _$HomeStateEmpty {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -208,7 +208,7 @@ class _$_$HomeStateEmpty implements _$HomeStateEmpty {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -318,7 +318,7 @@ class _$_$HomeStateLoading implements _$HomeStateLoading {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -331,7 +331,7 @@ class _$_$HomeStateLoading implements _$HomeStateLoading {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -344,7 +344,7 @@ class _$_$HomeStateLoading implements _$HomeStateLoading {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -478,7 +478,7 @@ class _$_$HomeStateFailure implements _$HomeStateFailure {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -491,7 +491,7 @@ class _$_$HomeStateFailure implements _$HomeStateFailure {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -504,7 +504,7 @@ class _$_$HomeStateFailure implements _$HomeStateFailure {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -582,7 +582,7 @@ abstract class _$$HomeStateBuscarEnderecoSuccessCopyWith<$Res> {
           _$HomeStateBuscarEnderecoSuccess value,
           $Res Function(_$HomeStateBuscarEnderecoSuccess) then) =
       __$$HomeStateBuscarEnderecoSuccessCopyWithImpl<$Res>;
-  $Res call({EnderecoModel endereco});
+  $Res call({Endereco endereco});
 }
 
 /// @nodoc
@@ -606,7 +606,7 @@ class __$$HomeStateBuscarEnderecoSuccessCopyWithImpl<$Res>
       endereco: endereco == freezed
           ? _value.endereco
           : endereco // ignore: cast_nullable_to_non_nullable
-              as EnderecoModel,
+              as Endereco,
     ));
   }
 }
@@ -618,7 +618,7 @@ class _$_$HomeStateBuscarEnderecoSuccess
   const _$_$HomeStateBuscarEnderecoSuccess({required this.endereco});
 
   @override
-  final EnderecoModel endereco;
+  final Endereco endereco;
 
   @override
   String toString() {
@@ -649,7 +649,7 @@ class _$_$HomeStateBuscarEnderecoSuccess
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -662,7 +662,7 @@ class _$_$HomeStateBuscarEnderecoSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -675,7 +675,7 @@ class _$_$HomeStateBuscarEnderecoSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -738,10 +738,10 @@ class _$_$HomeStateBuscarEnderecoSuccess
 }
 
 abstract class _$HomeStateBuscarEnderecoSuccess implements HomeState {
-  const factory _$HomeStateBuscarEnderecoSuccess(
-      {required EnderecoModel endereco}) = _$_$HomeStateBuscarEnderecoSuccess;
+  const factory _$HomeStateBuscarEnderecoSuccess({required Endereco endereco}) =
+      _$_$HomeStateBuscarEnderecoSuccess;
 
-  EnderecoModel get endereco;
+  Endereco get endereco;
   @JsonKey(ignore: true)
   _$$HomeStateBuscarEnderecoSuccessCopyWith<_$HomeStateBuscarEnderecoSuccess>
       get copyWith => throw _privateConstructorUsedError;
@@ -796,7 +796,7 @@ class _$_$HomeStateSaveEnderecoSuccess
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -809,7 +809,7 @@ class _$_$HomeStateSaveEnderecoSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -822,7 +822,7 @@ class _$_$HomeStateSaveEnderecoSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),
@@ -938,7 +938,7 @@ class _$_$HomeStateDisconnectAccountSuccess
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(EnderecoModel endereco) buscarEnderecoSuccess,
+    required TResult Function(Endereco endereco) buscarEnderecoSuccess,
     required TResult Function() saveEnderecoSuccess,
     required TResult Function() disconnectAccountSuccess,
   }) {
@@ -951,7 +951,7 @@ class _$_$HomeStateDisconnectAccountSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
   }) {
@@ -964,7 +964,7 @@ class _$_$HomeStateDisconnectAccountSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(EnderecoModel endereco)? buscarEnderecoSuccess,
+    TResult Function(Endereco endereco)? buscarEnderecoSuccess,
     TResult Function()? saveEnderecoSuccess,
     TResult Function()? disconnectAccountSuccess,
     required TResult orElse(),

@@ -1,9 +1,9 @@
-import 'package:clean_arch_aula/modules/enderecos/shared/models/endereco_model.dart';
+import 'package:clean_arch_aula/modules/enderecos/shared/entities/endereco.dart';
 import 'package:clean_arch_aula/shared/utils/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class EnderecoCardWidget extends StatelessWidget {
-  final EnderecoModel endereco;
+  final Endereco endereco;
   final VoidCallback? onPressSalvar;
 
   const EnderecoCardWidget({

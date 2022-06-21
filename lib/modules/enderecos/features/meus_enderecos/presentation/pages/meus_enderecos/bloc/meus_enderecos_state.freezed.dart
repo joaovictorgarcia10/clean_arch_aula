@@ -33,7 +33,7 @@ class _$MeusEnderecosStateTearOff {
   }
 
   _$MeusEnderecosStateGetListaEnderecosSuccess getListaEnderecosSuccess(
-      {required List<EnderecoModel> listaEnderecos}) {
+      {required List<Endereco> listaEnderecos}) {
     return _$MeusEnderecosStateGetListaEnderecosSuccess(
       listaEnderecos: listaEnderecos,
     );
@@ -50,7 +50,7 @@ mixin _$MeusEnderecosState {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(List<EnderecoModel> listaEnderecos)
+    required TResult Function(List<Endereco> listaEnderecos)
         getListaEnderecosSuccess,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,8 +59,7 @@ mixin _$MeusEnderecosState {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,8 +67,7 @@ mixin _$MeusEnderecosState {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -167,7 +165,7 @@ class _$_$MeusEnderecosStateEmpty implements _$MeusEnderecosStateEmpty {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(List<EnderecoModel> listaEnderecos)
+    required TResult Function(List<Endereco> listaEnderecos)
         getListaEnderecosSuccess,
   }) {
     return empty();
@@ -179,8 +177,7 @@ class _$_$MeusEnderecosStateEmpty implements _$MeusEnderecosStateEmpty {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
   }) {
     return empty?.call();
   }
@@ -191,8 +188,7 @@ class _$_$MeusEnderecosStateEmpty implements _$MeusEnderecosStateEmpty {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -294,7 +290,7 @@ class _$_$MeusEnderecosStateLoading implements _$MeusEnderecosStateLoading {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(List<EnderecoModel> listaEnderecos)
+    required TResult Function(List<Endereco> listaEnderecos)
         getListaEnderecosSuccess,
   }) {
     return loading();
@@ -306,8 +302,7 @@ class _$_$MeusEnderecosStateLoading implements _$MeusEnderecosStateLoading {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
   }) {
     return loading?.call();
   }
@@ -318,8 +313,7 @@ class _$_$MeusEnderecosStateLoading implements _$MeusEnderecosStateLoading {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -445,7 +439,7 @@ class _$_$MeusEnderecosStateFailure implements _$MeusEnderecosStateFailure {
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(List<EnderecoModel> listaEnderecos)
+    required TResult Function(List<Endereco> listaEnderecos)
         getListaEnderecosSuccess,
   }) {
     return failure(this.failure);
@@ -457,8 +451,7 @@ class _$_$MeusEnderecosStateFailure implements _$MeusEnderecosStateFailure {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
   }) {
     return failure?.call(this.failure);
   }
@@ -469,8 +462,7 @@ class _$_$MeusEnderecosStateFailure implements _$MeusEnderecosStateFailure {
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -537,7 +529,7 @@ abstract class _$$MeusEnderecosStateGetListaEnderecosSuccessCopyWith<$Res> {
           _$MeusEnderecosStateGetListaEnderecosSuccess value,
           $Res Function(_$MeusEnderecosStateGetListaEnderecosSuccess) then) =
       __$$MeusEnderecosStateGetListaEnderecosSuccessCopyWithImpl<$Res>;
-  $Res call({List<EnderecoModel> listaEnderecos});
+  $Res call({List<Endereco> listaEnderecos});
 }
 
 /// @nodoc
@@ -562,7 +554,7 @@ class __$$MeusEnderecosStateGetListaEnderecosSuccessCopyWithImpl<$Res>
       listaEnderecos: listaEnderecos == freezed
           ? _value.listaEnderecos
           : listaEnderecos // ignore: cast_nullable_to_non_nullable
-              as List<EnderecoModel>,
+              as List<Endereco>,
     ));
   }
 }
@@ -575,7 +567,7 @@ class _$_$MeusEnderecosStateGetListaEnderecosSuccess
       {required this.listaEnderecos});
 
   @override
-  final List<EnderecoModel> listaEnderecos;
+  final List<Endereco> listaEnderecos;
 
   @override
   String toString() {
@@ -609,7 +601,7 @@ class _$_$MeusEnderecosStateGetListaEnderecosSuccess
     required TResult Function() empty,
     required TResult Function() loading,
     required TResult Function(Failure failure) failure,
-    required TResult Function(List<EnderecoModel> listaEnderecos)
+    required TResult Function(List<Endereco> listaEnderecos)
         getListaEnderecosSuccess,
   }) {
     return getListaEnderecosSuccess(listaEnderecos);
@@ -621,8 +613,7 @@ class _$_$MeusEnderecosStateGetListaEnderecosSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
   }) {
     return getListaEnderecosSuccess?.call(listaEnderecos);
   }
@@ -633,8 +624,7 @@ class _$_$MeusEnderecosStateGetListaEnderecosSuccess
     TResult Function()? empty,
     TResult Function()? loading,
     TResult Function(Failure failure)? failure,
-    TResult Function(List<EnderecoModel> listaEnderecos)?
-        getListaEnderecosSuccess,
+    TResult Function(List<Endereco> listaEnderecos)? getListaEnderecosSuccess,
     required TResult orElse(),
   }) {
     if (getListaEnderecosSuccess != null) {
@@ -688,10 +678,10 @@ class _$_$MeusEnderecosStateGetListaEnderecosSuccess
 abstract class _$MeusEnderecosStateGetListaEnderecosSuccess
     implements MeusEnderecosState {
   const factory _$MeusEnderecosStateGetListaEnderecosSuccess(
-          {required List<EnderecoModel> listaEnderecos}) =
+          {required List<Endereco> listaEnderecos}) =
       _$_$MeusEnderecosStateGetListaEnderecosSuccess;
 
-  List<EnderecoModel> get listaEnderecos;
+  List<Endereco> get listaEnderecos;
   @JsonKey(ignore: true)
   _$$MeusEnderecosStateGetListaEnderecosSuccessCopyWith<
           _$MeusEnderecosStateGetListaEnderecosSuccess>

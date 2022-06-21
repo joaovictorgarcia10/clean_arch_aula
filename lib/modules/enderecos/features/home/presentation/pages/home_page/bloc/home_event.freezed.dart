@@ -25,7 +25,7 @@ class _$HomeEventTearOff {
     );
   }
 
-  _$HomeEventSaveEndereco saveEndereco({required EnderecoModel model}) {
+  _$HomeEventSaveEndereco saveEndereco({required Endereco model}) {
     return _$HomeEventSaveEndereco(
       model: model,
     );
@@ -44,21 +44,21 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuscarEndrecoParams params) buscarEndereco,
-    required TResult Function(EnderecoModel model) saveEndereco,
+    required TResult Function(Endereco model) saveEndereco,
     required TResult Function() disconnectAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
     required TResult orElse(),
   }) =>
@@ -171,7 +171,7 @@ class _$_$HomeEventBuscarEndereco implements _$HomeEventBuscarEndereco {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuscarEndrecoParams params) buscarEndereco,
-    required TResult Function(EnderecoModel model) saveEndereco,
+    required TResult Function(Endereco model) saveEndereco,
     required TResult Function() disconnectAccount,
   }) {
     return buscarEndereco(params);
@@ -181,7 +181,7 @@ class _$_$HomeEventBuscarEndereco implements _$HomeEventBuscarEndereco {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
   }) {
     return buscarEndereco?.call(params);
@@ -191,7 +191,7 @@ class _$_$HomeEventBuscarEndereco implements _$HomeEventBuscarEndereco {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
     required TResult orElse(),
   }) {
@@ -252,7 +252,7 @@ abstract class _$$HomeEventSaveEnderecoCopyWith<$Res> {
   factory _$$HomeEventSaveEnderecoCopyWith(_$HomeEventSaveEndereco value,
           $Res Function(_$HomeEventSaveEndereco) then) =
       __$$HomeEventSaveEnderecoCopyWithImpl<$Res>;
-  $Res call({EnderecoModel model});
+  $Res call({Endereco model});
 }
 
 /// @nodoc
@@ -274,7 +274,7 @@ class __$$HomeEventSaveEnderecoCopyWithImpl<$Res>
       model: model == freezed
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
-              as EnderecoModel,
+              as Endereco,
     ));
   }
 }
@@ -285,7 +285,7 @@ class _$_$HomeEventSaveEndereco implements _$HomeEventSaveEndereco {
   const _$_$HomeEventSaveEndereco({required this.model});
 
   @override
-  final EnderecoModel model;
+  final Endereco model;
 
   @override
   String toString() {
@@ -314,7 +314,7 @@ class _$_$HomeEventSaveEndereco implements _$HomeEventSaveEndereco {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuscarEndrecoParams params) buscarEndereco,
-    required TResult Function(EnderecoModel model) saveEndereco,
+    required TResult Function(Endereco model) saveEndereco,
     required TResult Function() disconnectAccount,
   }) {
     return saveEndereco(model);
@@ -324,7 +324,7 @@ class _$_$HomeEventSaveEndereco implements _$HomeEventSaveEndereco {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
   }) {
     return saveEndereco?.call(model);
@@ -334,7 +334,7 @@ class _$_$HomeEventSaveEndereco implements _$HomeEventSaveEndereco {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
     required TResult orElse(),
   }) {
@@ -381,10 +381,10 @@ class _$_$HomeEventSaveEndereco implements _$HomeEventSaveEndereco {
 }
 
 abstract class _$HomeEventSaveEndereco implements HomeEvent {
-  const factory _$HomeEventSaveEndereco({required EnderecoModel model}) =
+  const factory _$HomeEventSaveEndereco({required Endereco model}) =
       _$_$HomeEventSaveEndereco;
 
-  EnderecoModel get model;
+  Endereco get model;
   @JsonKey(ignore: true)
   _$$HomeEventSaveEnderecoCopyWith<_$HomeEventSaveEndereco> get copyWith =>
       throw _privateConstructorUsedError;
@@ -436,7 +436,7 @@ class _$_$HomeEventDisconnectAccount implements _$HomeEventDisconnectAccount {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuscarEndrecoParams params) buscarEndereco,
-    required TResult Function(EnderecoModel model) saveEndereco,
+    required TResult Function(Endereco model) saveEndereco,
     required TResult Function() disconnectAccount,
   }) {
     return disconnectAccount();
@@ -446,7 +446,7 @@ class _$_$HomeEventDisconnectAccount implements _$HomeEventDisconnectAccount {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
   }) {
     return disconnectAccount?.call();
@@ -456,7 +456,7 @@ class _$_$HomeEventDisconnectAccount implements _$HomeEventDisconnectAccount {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuscarEndrecoParams params)? buscarEndereco,
-    TResult Function(EnderecoModel model)? saveEndereco,
+    TResult Function(Endereco model)? saveEndereco,
     TResult Function()? disconnectAccount,
     required TResult orElse(),
   }) {
