@@ -20,20 +20,15 @@ void main() {
     test("ResetPassword - Success", () async {
       when(() => authRepository.resetPassword(email: "email"))
           .thenAnswer((_) async => const Right(true));
-
       final result = await resetPassword("email");
-
       result.fold((l) => null, (r) => expect(r, true));
     });
 
     test("ResetPassword - Failure", () async {
       final failure = Failure();
-
       when(() => authRepository.resetPassword(email: "email"))
           .thenAnswer((_) async => Left(failure));
-
       final result = await resetPassword("email");
-
       result.fold((l) => expect(l, failure), (r) => null);
     });
   });

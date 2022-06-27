@@ -21,23 +21,18 @@ void main() {
       when(() => authRepository.createAccount(
           email: "email",
           password: "password")).thenAnswer((_) async => const Right(true));
-
       final result = await createAccount(
           CreateAccountParams(email: "email", password: "password"));
-
       result.fold((l) => null, (r) => expect(r, true));
     });
 
     test("CreateAccount - Failure", () async {
       final failure = Failure();
-
       when(() => authRepository.createAccount(
           email: "email",
           password: "password")).thenAnswer((_) async => Left(failure));
-
       final result = await createAccount(
           CreateAccountParams(email: "email", password: "password"));
-
       result.fold((l) => expect(l, failure), (r) => null);
     });
   });

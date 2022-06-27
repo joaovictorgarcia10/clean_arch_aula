@@ -22,10 +22,8 @@ void main() {
       final user = UserModel();
       when(() => repository.doLogin(email: "email", password: "password"))
           .thenAnswer((_) async => Right(user));
-
       final response =
           await doLogin(DoLoginParams(email: "email", password: "password"));
-
       response.fold((l) => null, (r) => expect(r, user));
     });
 
@@ -33,10 +31,8 @@ void main() {
       final failure = Failure();
       when(() => repository.doLogin(email: "email", password: "password"))
           .thenAnswer((_) async => Left(failure));
-
       final response =
           await doLogin(DoLoginParams(email: "email", password: "password"));
-
       response.fold((l) => expect(l, failure), (r) => null);
     });
   });
