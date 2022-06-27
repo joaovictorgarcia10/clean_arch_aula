@@ -10,8 +10,7 @@ class BuscarEndreco implements UsecaseCore<Endereco, BuscarEndrecoParams> {
 
   @override
   Future<Either<Failure, Endereco>> call(BuscarEndrecoParams params) async {
-    final result = await _enderecoRepository.buscarEndereco(cep: params.cep);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _enderecoRepository.buscarEndereco(cep: params.cep);
   }
 }
 

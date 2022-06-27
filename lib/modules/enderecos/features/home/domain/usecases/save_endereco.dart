@@ -10,7 +10,6 @@ class SaveEndereco implements UsecaseCore<bool, Endereco> {
 
   @override
   Future<Either<Failure, bool>> call(Endereco endereco) async {
-    final result = await _homeRepository.saveEndereco(endereco: endereco);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _homeRepository.saveEndereco(endereco: endereco);
   }
 }

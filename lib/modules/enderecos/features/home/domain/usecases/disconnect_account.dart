@@ -9,7 +9,6 @@ class DisconnectAccount implements UsecaseCore<bool, NoParams> {
 
   @override
   Future<Either<Failure, bool>> call([NoParams? params]) async {
-    final result = await _repository.disconnet();
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _repository.disconnet();
   }
 }

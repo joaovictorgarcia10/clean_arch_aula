@@ -9,7 +9,6 @@ class ResetPassword extends UsecaseCore<bool, String> {
 
   @override
   Future<Either<Failure, bool>> call(String params) async {
-    final result = await repository.resetPassword(email: params);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await repository.resetPassword(email: params);
   }
 }

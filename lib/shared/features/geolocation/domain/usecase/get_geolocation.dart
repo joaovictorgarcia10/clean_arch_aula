@@ -10,7 +10,6 @@ class GetGeolocation implements UsecaseCore<Geolocation, NoParams> {
 
   @override
   Future<Either<Failure, Geolocation>> call([NoParams? params]) async {
-    final result = await _geolocationRepository.getGeolocation();
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _geolocationRepository.getGeolocation();
   }
 }

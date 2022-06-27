@@ -10,9 +10,10 @@ class DoLogin extends UsecaseCore<User, DoLoginParams> {
 
   @override
   Future<Either<Failure, User>> call(DoLoginParams params) async {
-    final result = await repository.doLogin(
-        email: params.email, password: params.password);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await repository.doLogin(
+      email: params.email,
+      password: params.password,
+    );
   }
 }
 

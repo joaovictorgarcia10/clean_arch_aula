@@ -10,7 +10,6 @@ class GetListaEnderecos implements UsecaseCore<List<Endereco>, NoParams> {
 
   @override
   Future<Either<Failure, List<Endereco>>> call([NoParams? params]) async {
-    final result = await _meusEnderecosRepository.getListaEnderecos();
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _meusEnderecosRepository.getListaEnderecos();
   }
 }

@@ -9,9 +9,7 @@ class DeleteEndereco implements UsecaseCore<bool, DeleteEnderecoParams> {
 
   @override
   Future<Either<Failure, bool>> call(DeleteEnderecoParams params) async {
-    final result =
-        await _meusEnderecosRepository.deleteEndereco(idEndereco: params.id);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await _meusEnderecosRepository.deleteEndereco(idEndereco: params.id);
   }
 }
 

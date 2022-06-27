@@ -9,9 +9,10 @@ class CreateAccount extends UsecaseCore<bool, CreateAccountParams> {
 
   @override
   Future<Either<Failure, bool>> call(CreateAccountParams params) async {
-    final result = await repository.createAccount(
-        email: params.email, password: params.password);
-    return result.fold((l) => Left(l), (r) => Right(r));
+    return await repository.createAccount(
+      email: params.email,
+      password: params.password,
+    );
   }
 }
 
