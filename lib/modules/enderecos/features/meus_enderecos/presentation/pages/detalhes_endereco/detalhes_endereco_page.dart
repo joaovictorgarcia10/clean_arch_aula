@@ -11,6 +11,7 @@ import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widge
 import 'package:clean_arch_aula/shared/widgets/message_modal/message_modal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get_it/get_it.dart';
 
 class DetalhesEnderecoPage extends StatefulWidget {
   final EnderecoModel endereco;
@@ -25,7 +26,7 @@ class DetalhesEnderecoPage extends StatefulWidget {
 }
 
 class _DetalhesEnderecoPageState extends State<DetalhesEnderecoPage> {
-  final bloc = Modular.get<DetalhesEnderecoBloc>();
+  final bloc = GetIt.I.get<DetalhesEnderecoBloc>();
   late StreamSubscription _subscription;
 
   @override

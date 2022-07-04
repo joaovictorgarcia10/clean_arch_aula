@@ -8,7 +8,7 @@ import 'package:clean_arch_aula/shared/widgets/button/button_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get_it/get_it.dart';
 import 'package:localization/localization.dart';
 
 class CadastroPage extends StatefulWidget {
@@ -29,7 +29,7 @@ class _CadastroPageState extends State<CadastroPage> {
   bool obscureTextConfirmPassword = true;
 
   late StreamSubscription subscription;
-  final _bloc = Modular.get<CadastroBloc>();
+  final _bloc = GetIt.I.get<CadastroBloc>();
 
   @override
   void initState() {

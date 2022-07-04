@@ -10,6 +10,7 @@ import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widge
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get_it/get_it.dart';
 import 'package:localization/localization.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final _bloc = Modular.get<LoginBloc>();
+  final _bloc = GetIt.I.get<LoginBloc>();
   late StreamSubscription subscription;
 
   final _formKey = GlobalKey<FormState>();

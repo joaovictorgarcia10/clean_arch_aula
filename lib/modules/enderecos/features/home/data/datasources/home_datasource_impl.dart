@@ -7,7 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get_it/get_it.dart';
 import 'home_datasource.dart';
 
 class HomeDatasourceImpl implements HomeDatasource {
@@ -54,7 +54,7 @@ class HomeDatasourceImpl implements HomeDatasource {
         "uf": endereco.uf,
         "ddd": endereco.ddd,
         "documentReference": endereco.documentReference,
-        "userId": Modular.get<Session>().usuario!.userId,
+        "userId": GetIt.I.get<Session>().usuario!.userId,
       };
 
       response.add(map);
