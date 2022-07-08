@@ -3,7 +3,7 @@ import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login
 import 'package:clean_arch_aula/modules/auth/presentation/pages/login/bloc/login_state.dart';
 import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class LoginBloc extends Bloc<DoLoginEvent, DoLoginState> {
   final DoLogin _doLogin;
@@ -36,7 +36,7 @@ class LoginBloc extends Bloc<DoLoginEvent, DoLoginState> {
     super.onTransition(transition);
     final state = transition.nextState;
     state.maybeWhen(
-      success: (user) => GetIt.I.get<Session>().usuario = user,
+      success: (user) => Modular.get<Session>().usuario = user,
       orElse: () {},
     );
   }

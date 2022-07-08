@@ -20,7 +20,6 @@ import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_w
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:get_it/get_it.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController textFieldController = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  final bloc = GetIt.I.get<HomeBloc>();
+  final bloc = Modular.get<HomeBloc>();
   late StreamSubscription _subscription;
 
   @override
@@ -94,7 +93,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: MenuLateralWidget(
-        user: GetIt.I.get<Session>().usuario,
+        user: Modular.get<Session>().usuario,
         options: MenuLateralItems(),
       ),
       appBar: AppBar(

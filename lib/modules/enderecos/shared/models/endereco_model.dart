@@ -3,17 +3,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../entities/endereco.dart';
 
 class EnderecoModel extends Endereco {
-  EnderecoModel({
-    String? cep,
-    String? logradouro,
-    String? complemento,
-    String? bairro,
-    String? localidade,
-    String? uf,
-    String? ddd,
-    DocumentReference? documentReference,
-    String? userId,
-  }) : super(
+  EnderecoModel(
+      {String? cep,
+      String? logradouro,
+      String? complemento,
+      String? bairro,
+      String? localidade,
+      String? uf,
+      String? ddd,
+      DocumentReference? documentReference,
+      String? userId})
+      : super(
           cep: cep,
           logradouro: logradouro,
           complemento: complemento,

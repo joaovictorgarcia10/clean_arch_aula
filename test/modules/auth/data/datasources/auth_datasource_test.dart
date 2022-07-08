@@ -1,58 +1,53 @@
-// TODO: descobrir como testar essas requests ao firebase
+import 'package:clean_arch_aula/modules/auth/data/datasources/auth_datasource.dart';
+import 'package:clean_arch_aula/modules/auth/data/datasources/auth_datasource_impl.dart';
+import 'package:clean_arch_aula/modules/auth/data/models/user_model.dart';
+import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 
+class MockFirebaseAuth extends Mock implements FirebaseAuth {}
 
-// import 'package:clean_arch_aula/modules/auth/data/datasources/auth_datasource.dart';
-// import 'package:clean_arch_aula/modules/auth/data/datasources/auth_datasource_impl.dart';
-// import 'package:clean_arch_aula/modules/auth/data/models/user_model.dart';
-// import 'package:dartz/dartz.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:flutter_test/flutter_test.dart';
-// import 'package:mocktail/mocktail.dart';
+void main() {
+  late MockFirebaseAuth firebaseAuth;
+  late AuthDatasource authDatasource;
 
+  setUp(() {
+    firebaseAuth = MockFirebaseAuth();
+    authDatasource = AuthDatasourceImpl(firebaseAuth: firebaseAuth);
+  });
 
+  group("doLogin", () {
+    test("doLogin - success", () async {
+      final userModel = UserModel(
+        email: "email",
+        nome: "nome",
+        photoUrl: "photoUrl",
+        userId: "userId",
+      );
 
-// class MockFirebaseAuth extends Mock implements FirebaseAuth {}
+      when(() => authDatasource.doLogin(email: "email", password: "password"))
+          .thenAnswer((_) => Future.value(Right(userModel)));
 
-// void main() {
-//   late MockFirebaseAuth firebaseAuth;
-//   late AuthDatasource authDatasource;
+      final result =
+          await authDatasource.doLogin(email: "email", password: "password");
 
-//   setUp(() {
-//     firebaseAuth = MockFirebaseAuth();
-//     authDatasource = AuthDatasourceImpl(firebaseAuth: firebaseAuth);
-//   });
+      result.fold((l) => null, (r) => expect(r, isInstanceOf<UserModel>()));
+      result.fold((l) => null, (r) => expect(r.email, "email"));
+    });
 
-//   group("doLogin", () {
-//     test("doLogin - success", () async {
-//       final userModel = UserModel(
-//         email: "email",
-//         nome: "nome",
-//         photoUrl: "photoUrl",
-//         userId: "userId",
-//       );
+    test("doLogin - failure", () {});
+  });
 
-//       when(() => authDatasource.doLogin(email: "email", password: "password"))
-//           .thenAnswer((_) => Future.value(Right(userModel)));
+  group("createAccount", () {
+    test("createAccount - failure", () {});
 
-//       final result =
-//           await authDatasource.doLogin(email: "email", password: "password");
+    test("createAccount - success", () {});
+  });
 
-//       result.fold((l) => null, (r) => expect(r, isInstanceOf<UserModel>()));
-//       result.fold((l) => null, (r) => expect(r.email, "email"));
-//     });
+  group("resetPassword", () {
+    test("resetPassword - failure", () {});
 
-//     test("doLogin - failure", () {});
-//   });
-
-//   group("createAccount", () {
-//     test("createAccount - failure", () {});
-
-//     test("createAccount - success", () {});
-//   });
-
-//   group("resetPassword", () {
-//     test("resetPassword - failure", () {});
-
-//     test("resetPassword - success", () {});
-//   });
-// }
+    test("resetPassword - success", () {});
+  });
+}

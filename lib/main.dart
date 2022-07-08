@@ -1,14 +1,12 @@
 import 'package:clean_arch_aula/app_module.dart';
 import 'package:clean_arch_aula/firebase_app_widget.dart';
-import 'package:clean_arch_aula/shared/core/injection/app_injection.dart';
-import 'package:clean_arch_aula/shared/utils/bloc_observer/custom_bloc_observer.dart';
+import 'package:clean_arch_aula/shared/core/bloc_observer/custom_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized;
-  await AppInjection().init();
 
   BlocOverrides.runZoned(
     () => runApp(

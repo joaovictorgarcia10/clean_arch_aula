@@ -4,12 +4,11 @@ import 'package:clean_arch_aula/shared/widgets/list_tile/list_tile_widget.dart';
 import 'package:clean_arch_aula/shared/widgets/message_modal/message_modal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:get_it/get_it.dart';
 
 class MenuLateralItems extends StatelessWidget {
   MenuLateralItems({Key? key}) : super(key: key);
 
-  final bloc = GetIt.I.get<HomeBloc>();
+  final bloc = Modular.get<HomeBloc>();
 
   @override
   Widget build(BuildContext context) {

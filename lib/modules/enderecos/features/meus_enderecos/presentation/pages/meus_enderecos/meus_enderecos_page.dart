@@ -10,7 +10,6 @@ import 'package:clean_arch_aula/shared/widgets/message_card/message_card_widget.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:get_it/get_it.dart';
 import 'bloc/meus_enderecos_bloc.dart';
 
 class MeusEnderecosPage extends StatefulWidget {
@@ -21,7 +20,7 @@ class MeusEnderecosPage extends StatefulWidget {
 }
 
 class _MeusEnderecosPageState extends State<MeusEnderecosPage> {
-  final bloc = GetIt.I.get<MeusEnderecosBloc>();
+  final bloc = Modular.get<MeusEnderecosBloc>();
   late StreamSubscription subscription;
 
   @override

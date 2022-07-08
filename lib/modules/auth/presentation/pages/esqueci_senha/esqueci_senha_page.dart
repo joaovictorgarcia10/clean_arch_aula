@@ -8,7 +8,6 @@ import 'package:clean_arch_aula/shared/widgets/loading_modal/loading_modal_widge
 import 'package:clean_arch_aula/shared/widgets/text_form_field/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:get_it/get_it.dart';
 import 'bloc/esqueci_senha_bloc.dart';
 
 class EsqueciSenhaPage extends StatefulWidget {
@@ -19,7 +18,7 @@ class EsqueciSenhaPage extends StatefulWidget {
 }
 
 class _EsqueciSenhaPageState extends State<EsqueciSenhaPage> {
-  final bloc = GetIt.I.get<EsqueciSenhaBloc>();
+  final bloc = Modular.get<EsqueciSenhaBloc>();
   late StreamSubscription subscription;
 
   TextEditingController textController = TextEditingController();

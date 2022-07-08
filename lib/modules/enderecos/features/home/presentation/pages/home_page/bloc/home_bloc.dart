@@ -6,7 +6,7 @@ import 'package:clean_arch_aula/modules/enderecos/features/home/presentation/pag
 import 'package:clean_arch_aula/shared/core/session/session.dart';
 import 'package:clean_arch_aula/modules/auth/domain/entities/user.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final BuscarEndreco _buscarEndreco;
@@ -56,7 +56,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     super.onTransition(transition);
     final state = transition.nextState;
     state.maybeWhen(
-      disconnectAccountSuccess: () => GetIt.I.get<Session>().usuario = User(),
+      disconnectAccountSuccess: () => Modular.get<Session>().usuario = User(),
       orElse: () {},
     );
   }
