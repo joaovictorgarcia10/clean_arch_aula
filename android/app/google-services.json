@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "70328570569",
+    "firebase_url": "https://clean-arch-aula-default-rtdb.firebaseio.com",
     "project_id": "clean-arch-aula",
     "storage_bucket": "clean-arch-aula.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "70328570569-g0fmio8aqp4qeefg2cr6nq784bg7duk4.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "70328570569-ak6kbch44m4na0kfls91tevjihnb7i86.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cleanArchAula"
+              }
             }
           ]
         }
