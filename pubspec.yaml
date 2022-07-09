@@ -17,7 +17,6 @@ dependencies:
   firebase_core: ^1.17.0
   firebase_auth: ^3.3.18
   cloud_firestore: ^3.1.16
-  firebase_auth_mocks: ^0.8.4
   flutter_modular: ^5.0.2
   dartz: ^0.10.1
   flutter_bloc: ^8.0.1
@@ -29,7 +28,6 @@ dependencies:
   url_launcher: ^6.1.2
 
   mocktail: ^0.3.0
-
 
 
 dev_dependencies:
