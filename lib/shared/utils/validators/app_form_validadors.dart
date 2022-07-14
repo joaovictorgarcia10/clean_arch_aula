@@ -1,8 +1,10 @@
+import 'package:localization/localization.dart';
+
 class AppFormValidadors {
   // Generic
   String? genericValidator(String? text) {
     if (text == null || text.isEmpty) {
-      return "Este campo deve ser preenchido";
+      return "validator_generic_label".i18n();
     }
     return null;
   }
@@ -10,10 +12,10 @@ class AppFormValidadors {
   // CEP
   String? cepValidator(String? text) {
     if (text == null || text.isEmpty) {
-      return "Este campo deve ser preenchido";
+      return "validator_generic_label".i18n();
     }
     if (text.length != 9) {
-      return "Preencha com um CEP válido";
+      return "validator_cep_label".i18n();
     }
     return null;
   }
@@ -21,10 +23,10 @@ class AppFormValidadors {
   //Email
   String? emailValidator(String? text) {
     if (text == null || text.isEmpty) {
-      return "Este campo deve ser preenchido";
+      return "validator_generic_label".i18n();
     }
     if (!text.contains("@")) {
-      return "Preencha com um email válido";
+      return "validator_email_label".i18n();
     }
     return null;
   }
@@ -32,10 +34,10 @@ class AppFormValidadors {
   // Password
   String? passwordValidator(String? text) {
     if (text == null || text.isEmpty) {
-      return "Este campo deve ser preenchido";
+      return "validator_generic_label".i18n();
     }
     if (text.length < 6) {
-      return "Sua senha deve ter pelo menos 6 dígitos";
+      return "validator_password_label".i18n();
     }
     return null;
   }
@@ -44,13 +46,13 @@ class AppFormValidadors {
   String? confirmPasswordValidator(
       {String? confirmPassword, required String password}) {
     if (confirmPassword == null || confirmPassword.isEmpty) {
-      return "Este campo deve ser preenchido";
+      return "validator_generic_label".i18n();
     }
     if (confirmPassword.length < 6) {
-      return "Sua senha deve ter pelo menos 6 dígitos";
+      return "validator_password_label".i18n();
     }
     if (confirmPassword != password) {
-      return "As senhas estão diferentes";
+      return "validator_confirm_password_label".i18n();
     }
     return null;
   }

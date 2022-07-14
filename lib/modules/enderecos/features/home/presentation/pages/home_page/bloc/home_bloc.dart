@@ -56,7 +56,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     super.onTransition(transition);
     final state = transition.nextState;
     state.maybeWhen(
-      disconnectAccountSuccess: () => Modular.get<Session>().usuario = User(),
+      disconnectAccountSuccess: () => Modular.get<Session>().usuario = null,
       orElse: () {},
     );
   }
