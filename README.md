@@ -40,6 +40,27 @@ Each module are divided in some layers, so that each layer has its responsibilit
 ## Preview
 
 
+<div align="center"> 
+
+ <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817565.png" width="415" height="650"/>
+ <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817571.png" width="415" height="650"/>
+ <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817575.png" width="415" height="650"/>
+ <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817579.png" width="415" height="650"/>
+
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817597.png" width="415" height="650"/>
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817617.png" width="415" height="650"/>
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817620.png" width="415" height="650"/>
+
+
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817623.png" width="415" height="650"/>
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817630.png" width="415" height="650"/>
+<img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817635.png" width="415" height="650"/>
+
+</div>
+
+
+
+
 ## Some References
 
 - Clean Architecture: https://www.youtube.com/playlist?list=PLRpTFz5_57cvCYRhHUui2Bis-5Ybh78TS
