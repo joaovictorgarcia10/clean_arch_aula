@@ -44,6 +44,7 @@ Each module are divided in some layers, so that each layer has its responsibilit
 
 - Clean Architecture: https://www.youtube.com/playlist?list=PLRpTFz5_57cvCYRhHUui2Bis-5Ybh78TS
 - Firebase Integration: https://www.youtube.com/watch?v=14Ahr8S1psk&list=PLRpTFz5_57cvYvKja5Ex92aQ_HNADo4Oh&index=1&t=266s
+- Geolocation: https://www.youtube.com/watch?v=TruOM8pB2_k&t=666s
 - FlutterFire Documentation: https://firebase.flutter.dev/docs/overview/
 - Clean Dart Documentation: https://github.com/Flutterando/Clean-Dart
 
