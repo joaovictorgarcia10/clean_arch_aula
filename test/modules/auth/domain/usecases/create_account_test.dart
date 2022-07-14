@@ -19,10 +19,8 @@ void main() {
   group("CreateAccount", () {
     test("CreateAccount - Success", () async {
       when(
-        () => authRepository.createAccount(
-          email: "email",
-          password: "password",
-        ),
+        () =>
+            authRepository.createAccount(email: "email", password: "password"),
       ).thenAnswer((_) async => const Right(true));
       final result = await createAccount(
           CreateAccountParams(email: "email", password: "password"));

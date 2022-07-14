@@ -10,6 +10,7 @@ import 'shared/core/session/session.dart';
 class AppModule extends Module {
   @override
   final List<Bind> binds = [
+    // Session
     Bind((i) => Session()),
 
     // Geolocation
