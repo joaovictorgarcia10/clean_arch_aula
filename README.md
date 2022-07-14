@@ -40,7 +40,6 @@ Each module are divided in some layers, so that each layer has its responsibilit
 ## Preview
 
 
-<p align="left"> 
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817565.png" width="415" height="650"/>
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817571.png" width="415" height="650"/>
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817575.png" width="415" height="650"/>
@@ -51,7 +50,6 @@ Each module are divided in some layers, so that each layer has its responsibilit
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817623.png" width="415" height="650"/>
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817630.png" width="415" height="650"/>
 <img src="https://github.com/joaovictorgarcia10/clean_arch_aula/blob/master/assets/images/preview/Screenshot_1657817635.png" width="415" height="650"/>
-</p>
 
 
 
