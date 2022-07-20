@@ -21,7 +21,7 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute("/", module: AuthModule()),
+    ModuleRoute(Modular.initialRoute, module: AuthModule()),
     ModuleRoute("/home", module: HomeModule()),
     ModuleRoute("/meus_enderecos", module: MeusEnderecosModule()),
   ];

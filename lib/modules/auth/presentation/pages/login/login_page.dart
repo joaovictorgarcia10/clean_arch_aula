@@ -23,9 +23,9 @@ class _LoginPageState extends State<LoginPage> {
   final _bloc = Modular.get<LoginBloc>();
   late StreamSubscription subscription;
 
+  // FORMULÁRIO
   final _formKey = GlobalKey<FormState>();
   bool obscureTextPassword = true;
-
   TextEditingController emailText = TextEditingController();
   TextEditingController passwordText = TextEditingController();
 
@@ -42,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           );
+
           Modular.to.pushReplacementNamed("/home");
         },
         loading: () {

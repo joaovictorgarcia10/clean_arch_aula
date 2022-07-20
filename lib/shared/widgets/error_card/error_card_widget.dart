@@ -36,12 +36,6 @@ class ErrorCardWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
-                    message,
-                    style: AppTextStyles.bodyText,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 30.0),
                   ButtonWidget(
                     title: "Tentar novamente",
                     onTap: onTapButton,

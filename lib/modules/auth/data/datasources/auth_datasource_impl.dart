@@ -42,7 +42,10 @@ class AuthDatasourceImpl implements AuthDatasource {
       {required String email, required String password}) async {
     try {
       await firebaseAuth.createUserWithEmailAndPassword(
-          email: email, password: password);
+        email: email,
+        password: password,
+      );
+
       return const Right(true);
     } on FirebaseAuthException catch (e) {
       if (e.code == "email-already-in-use") {
@@ -58,6 +61,7 @@ class AuthDatasourceImpl implements AuthDatasource {
   Future<Either<Failure, bool>> resetPassword({required String email}) async {
     try {
       await firebaseAuth.sendPasswordResetEmail(email: email);
+
       return const Right(true);
     } on FirebaseAuthException catch (e) {
       if (e.code == "user-not-found") {

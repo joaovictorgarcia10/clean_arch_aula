@@ -25,6 +25,7 @@ class HomeDatasourceImpl implements HomeDatasource {
       {required String cep}) async {
     try {
       final result = await dio.get("$cep/json");
+
       if (result.statusCode == 200 && result.data != null) {
         return Right(EnderecoModel.fromMap(result.data));
       } else {

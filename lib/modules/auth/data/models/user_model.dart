@@ -2,8 +2,17 @@ import 'dart:convert';
 import 'package:clean_arch_aula/modules/auth/domain/entities/user.dart';
 
 class UserModel extends User {
-  UserModel({String? nome, String? email, String? photoUrl, String? userId})
-      : super(nome: nome, email: email, photoUrl: photoUrl, userId: userId);
+  UserModel({
+    String? nome,
+    String? email,
+    String? photoUrl,
+    String? userId,
+  }) : super(
+          nome: nome,
+          email: email,
+          photoUrl: photoUrl,
+          userId: userId,
+        );
 
   UserModel copyWith({
     String? nome,
